@@ -859,9 +859,7 @@
         '.faq-item',
         '.contact-card',
         '.feature-card',
-        '.license-summary-card',
-        '.footer-col',
-        '.footer-bottom'
+        '.license-summary-card'
       ];
       var elements = Array.from(document.querySelectorAll(revealSelectors.join(', ')));
       if (!elements.length) return;
@@ -987,5 +985,13 @@
     }
 
     initContactForm();
+
+    // 11. Footer Back-to-Top Smooth Scroll
+    document.querySelectorAll('.to-top').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      });
+    });
   });
 })();
