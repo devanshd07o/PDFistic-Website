@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support &amp; FAQ - PDFistic</title>
+  <meta name="description" content="Help guides, keyboard shortcuts, frequently asked questions, and developer contact for PDFistic on Windows.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="venom-button.js" defer></script>
+</head>
+<body class="page-document">
+
+  <!-- Shared Squircle Clip Path -->
+  <svg width="0" height="0" style="position: absolute; pointer-events: none;" aria-hidden="true">
+    <defs>
+      <clipPath id="squircleClip" clipPathUnits="objectBoundingBox">
+        <path d="M 0,0.5 C 0,0 0,0 0.5,0 S 1,0 1,0.5 1,1 0.5,1 0,1 0,0.5"></path>
+      </clipPath>
+    </defs>
+  </svg>
+
+  <!-- Floating Navigation Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <img src="icon.png" alt="PDFistic Logo" class="brand-logo">
+        <span class="brand-title">PDFistic</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="primaryNav">
+          <li><a href="index.html#features">Features<svg class="skiper-arrow" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1m0 0v8m0-8H1"/></svg></a></li>
+          <li><a href="privacy.html">Privacy<svg class="skiper-arrow" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1m0 0v8m0-8H1"/></svg></a></li>
+          <li><a href="terms.html">Terms<svg class="skiper-arrow" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1m0 0v8m0-8H1"/></svg></a></li>
+          <li><a href="support.html" class="active">Support &amp; FAQ<svg class="skiper-arrow" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1m0 0v8m0-8H1"/></svg></a></li>
+          <li><a href="contact.html">Contact<svg class="skiper-arrow" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1m0 0v8m0-8H1"/></svg></a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="https://github.com/devanshd07o/PDFISTIC-v2" target="_blank" rel="noopener noreferrer" class="nav-github-btn btn-17" title="View Source on GitHub">
+          <span class="text-container">
+            <span class="text">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </span>
+          </span>
+        </a>
+        <a href="https://apps.microsoft.com/detail/9PMCFQL187MN?hl=en-us&gl=IN&ocid=pdpshare" class="nav-win-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.949-1.801"/>
+          </svg>
+          <span>Get on Windows</span>
+        </a>
+        <button class="nav-toggle-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- Document Header -->
+  <main>
+    <header class="doc-header">
+      <div class="doc-eyebrow"><span class="doc-eyebrow-dot" aria-hidden="true"></span><span>Help &amp; Guides</span></div>
+      <h1 class="doc-title">Support &amp; FAQ</h1>
+      <p class="doc-subline">Easy setup steps, keyboard shortcuts, common answers, and direct help for PDFistic on Windows.</p>
+      <div class="doc-version-meta">Last updated November 9, 2026 &middot; Version 2.0.0</div>
+    </header>
+
+    <!-- Document Layout (TOC + Article) -->
+    <div class="doc-container">
+      <aside class="doc-toc">
+        <div class="doc-toc-title">On this page</div>
+        <nav id="support-toc">
+          <a href="#getting-started" class="active">Getting started</a>
+          <a href="#default-app">Default PDF app</a>
+          <a href="#reader-modes">Reader modes</a>
+          <a href="#shortcuts">Shortcuts</a>
+          <a href="#ai-setup">Free AI setup</a>
+          <a href="#tour">Feature tour</a>
+          <a href="#faq">Common questions</a>
+          <a href="#contact">Contact &amp; bugs</a>
+        </nav>
+        <div class="uiverse-card uiverse-card--subtle toc-action-box">
+          <div class="uiverse-card-info toc-action-inner">
+            <h4>Still stuck?</h4>
+            <p>Message the developer directly or report a problem with your file.</p>
+            <a href="contact.html" class="btn btn-cream-primary" style="width: 100%;">Contact Support</a>
+          </div>
+        </div>
+      </aside>
+
+      <article class="doc-content">
+        <!-- The Short Version -->
+        <div class="uiverse-card uiverse-card--subtle doc-short-version">
+          <div class="uiverse-card-info doc-short-version-inner">
+            <h2>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              The short version
+            </h2>
+            <p>
+              PDFistic runs on your PC and works out of the box without an account or an internet connection. If something does not work as expected or you have questions, reach me directly on GitHub or by email.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 1 -->
+        <section class="doc-section" id="getting-started">
+          <h2>1. Getting started</h2>
+          <p>
+            Drag and drop any PDF or EPUB directly into PDFistic, or press <code>Ctrl + O</code> to open a file. The document opens directly in memory on your PC.
+          </p>
+          <ul>
+            <li><strong>Document tabs:</strong> Open multiple documents in separate tabs, each with independent zoom, page state, and navigation history.</li>
+            <li><strong>Recent files:</strong> The launchpad remembers your recent files locally so you can resume where you left off.</li>
+            <li><strong>Offline by default:</strong> You do not need to configure keys, create an account, or connect to the internet to read and annotate files.</li>
+          </ul>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="doc-section" id="default-app">
+          <h2>2. Setting default reader on Windows 11</h2>
+          <p>
+            To make PDFistic your primary PDF reader on Windows 11 so that double-clicking any PDF opens it directly:
+          </p>
+          <div class="step-cards-grid">
+            <div class="uiverse-card step-card">
+              <div class="uiverse-card-info step-card-inner">
+                <span class="step-num-badge">Step 01</span>
+                <h3>Right-click any PDF</h3>
+                <p>Right-click any <code>.pdf</code> file inside Windows File Explorer.</p>
+              </div>
+            </div>
+            <div class="uiverse-card step-card">
+              <div class="uiverse-card-info step-card-inner">
+                <span class="step-num-badge">Step 02</span>
+                <h3>Choose PDFistic</h3>
+                <p>Click <strong>Open with</strong> &rarr; <strong>Choose another app</strong> and pick <strong>PDFistic</strong>.</p>
+              </div>
+            </div>
+            <div class="uiverse-card step-card">
+              <div class="uiverse-card-info step-card-inner">
+                <span class="step-num-badge">Step 03</span>
+                <h3>Lock as default</h3>
+                <p>Check <em>&ldquo;Always use this app to open .pdf files&rdquo;</em> and click <strong>OK</strong>.</p>
+              </div>
+            </div>
+          </div>
+          <p>
+            Alternatively, open Windows Settings (<code>Win + I</code>), go to <strong>Apps</strong> &rarr; <strong>Default apps</strong>, search for <code>PDFistic</code>, and select it for the <code>.pdf</code> extension.
+          </p>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="doc-section" id="reader-modes">
+          <h2>3. Reader modes</h2>
+          <p>
+            PDFistic includes two reading engines designed for different types of reading:
+          </p>
+          <ul>
+            <li><strong>Continuous scroll mode:</strong> Vertical scrolling designed for research papers, documentation, and technical reports. Supports text selection, line-by-line highlighting, freehand pen notes, and shape callouts.</li>
+            <li><strong>3D book-flip mode:</strong> Realistic page-turn simulation with two-page spread viewing and natural transitions, well-suited for novels and EPUB books.</li>
+          </ul>
+
+          <div class="doc-screenshot-frame">
+            <img src="assets/screenshots/book_flip.png" alt="3D book-flip view in PDFistic" loading="lazy">
+          </div>
+          <div class="doc-screenshot-caption">3D book-flip view showing two-page spread in PDFistic.</div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="doc-section" id="shortcuts">
+          <h2>4. Keyboard shortcuts</h2>
+          <p>
+            Common shortcuts for fast reading and annotating:
+          </p>
+
+          <div class="spec-table-container">
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Shortcut</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><kbd class="kbd-key">Ctrl + O</kbd></td><td>Open file dialog</td></tr>
+                <tr><td><kbd class="kbd-key">Ctrl + W</kbd></td><td>Close current active document tab</td></tr>
+                <tr><td><kbd class="kbd-key">Ctrl + F</kbd></td><td>Open in-document search bar</td></tr>
+                <tr><td><kbd class="kbd-key">Ctrl + \</kbd></td><td>Toggle split document comparison view</td></tr>
+                <tr><td><kbd class="kbd-key">Ctrl + /</kbd></td><td>Toggle AI Copilot panel</td></tr>
+                <tr><td><kbd class="kbd-key">Alt + 1 .. 5</kbd></td><td>Switch tools (Select, Pen, Highlight, Shapes, Eraser)</td></tr>
+                <tr><td><kbd class="kbd-key">Ctrl + Z / Ctrl + Y</kbd></td><td>Undo / Redo annotation stroke</td></tr>
+                <tr><td><kbd class="kbd-key">Ctrl + ,</kbd></td><td>Open Application Settings</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="doc-section" id="ai-setup">
+          <h2>5. Free AI keys guide</h2>
+          <p>
+            The optional AI Copilot can answer questions about your documents, summarize text, or explain complex passages. You can use free API keys from Google or Groq:
+          </p>
+          <ul>
+            <li><strong>Google Gemini:</strong> Visit <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">aistudio.google.com/app/apikey</a>, sign in with your Google account, click <em>Create API Key</em>, and copy the key.</li>
+            <li><strong>Groq Cloud:</strong> Visit <a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer">console.groq.com/keys</a>, create a free account, click <em>Create API Key</em>, and copy the key.</li>
+            <li><strong>Saving your key in PDFistic:</strong> Press <code>Ctrl + ,</code> to open Settings, go to <strong>AI &amp; Keys</strong>, and paste your key. On Windows, keys are encrypted using Windows Data Protection API (DPAPI) and tied to your Windows user account.</li>
+          </ul>
+
+          <div class="doc-screenshot-frame">
+            <img src="assets/screenshots/settings_suite.png" alt="PDFistic settings window showing API key configuration" loading="lazy">
+          </div>
+          <div class="doc-screenshot-caption">Settings window showing local DPAPI-encrypted key configuration.</div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="doc-section" id="tour">
+          <h2>6. Feature tour replay</h2>
+          <p>
+            If you skipped or want to revisit the interactive walkthrough that introduces the reading modes, annotation tools, and keyboard shortcuts:
+          </p>
+          <p>
+            Open PDFistic, press <code>Ctrl + ,</code> to open Settings, navigate to the <strong>About</strong> section, and click <strong>Feature Tour</strong>. The interactive walkthrough will begin immediately.
+          </p>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="doc-section" id="faq">
+          <h2>7. Frequently asked questions</h2>
+
+          <div class="uiverse-card uiverse-card--subtle faq-item">
+            <div class="uiverse-card-info faq-item-inner">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>Does PDFistic require an internet connection?</span>
+                <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer">
+                  No. All document rendering, EPUB parsing, text selection, annotations, and OCR run locally on your PC. An internet connection is only used if you choose to ask questions through the AI Copilot with your own API key.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="uiverse-card uiverse-card--subtle faq-item">
+            <div class="uiverse-card-info faq-item-inner">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>How do updates work?</span>
+                <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer">
+                  If you installed PDFistic from the Microsoft Store, Windows handles updates automatically in the background. If you downloaded a standalone installer, you can check for updates in Settings &rarr; About &rarr; Check for Updates.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="uiverse-card uiverse-card--subtle faq-item">
+            <div class="uiverse-card-info faq-item-inner">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>Are annotations saved directly into my files?</span>
+                <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer">
+                  Yes. When you click Save or Export, your highlights, notes, and drawings are written into the standard PDF annotation stream in accordance with ISO specifications, readable by any compliant PDF viewer.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="uiverse-card uiverse-card--subtle faq-item">
+            <div class="uiverse-card-info faq-item-inner">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>How do I delete all data stored by the app?</span>
+                <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-collapse">
+                <div class="faq-answer">
+                  Delete the folder <code>%APPDATA%\pdfistic</code> (or the package data folder under <code>%LOCALAPPDATA%\Packages</code> for Microsoft Store installs). That removes all settings, recent file history, and stored API keys.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="doc-section" id="contact">
+          <h2>8. Bug reports and contact</h2>
+          <p>
+            If you encounter a bug, a file that does not open correctly, or want to suggest a feature, you can contact me directly or open an issue:
+          </p>
+          <ul>
+            <li>GitHub Issue Tracker: <a href="https://github.com/devanshd07o/PDFISTIC-v2/issues" target="_blank" rel="noopener noreferrer">github.com/devanshd07o/PDFISTIC-v2/issues</a></li>
+            <li>Email: <a href="mailto:devanshdubey2004@gmail.com">devanshdubey2004@gmail.com</a></li>
+            <li>Repository: <a href="https://github.com/devanshd07o/PDFISTIC-v2" target="_blank" rel="noopener noreferrer">github.com/devanshd07o/PDFISTIC-v2</a></li>
+          </ul>
+          <p>
+            When reporting a bug, including your Windows version and the steps to reproduce the issue helps me resolve it quickly.
+          </p>
+        </section>
+
+        <div class="uiverse-card uiverse-card--subtle doc-next-strip">
+          <div class="uiverse-card-info doc-next-inner">
+            <div>
+              <h3>Need direct assistance?</h3>
+              <p>Message Devansh directly or review how your files stay private on Windows.</p>
+            </div>
+            <div class="doc-next-actions">
+              <a href="contact.html" class="btn btn-cream-primary">Contact Developer</a>
+              <a href="privacy.html" class="btn btn-cream-secondary">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Official Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col-brand">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="icon.png" alt="PDFistic" style="width: 28px; height: 28px; border-radius: 7px;">
+          <span style="font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-dark-primary);">PDFistic</span>
+        </div>
+        <p>
+          PDF and e-book reader for Windows 10 and 11. Built with privacy, precision, and focus.
+        </p>
+        <div class="squircle-dock-wrap">
+          <div class="squircle-dock-backdrop"></div>
+          <div class="squircle-dock-items">
+            <div class="squircle-dock-item"><a href="https://github.com/devanshd07o/PDFISTIC-v2" target="_blank" rel="noopener noreferrer" class="squircle-btn btn-gh" title="GitHub" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.46-1.334-5.46-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a></div>
+            <div class="squircle-dock-item"><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="squircle-btn btn-li" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div>
+            <div class="squircle-dock-item"><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="squircle-btn btn-yt" title="YouTube" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg></a></div>
+            <div class="squircle-dock-item"><a href="https://discord.gg" target="_blank" rel="noopener noreferrer" class="squircle-btn btn-dc" title="Discord" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"></path></svg></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#tour">Feature Tour</a></li>
+          <li><a href="https://apps.microsoft.com/detail/9PMCFQL187MN?hl=en-us&gl=IN&ocid=pdpshare">Download on Windows</a></li>
+          <li><a href="https://github.com/devanshd07o/PDFISTIC-v2">GitHub Repository</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal &amp; Trust</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="licenses.html">Open Source Notices</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="support.html" class="footer-link-active">Help Center &amp; FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="https://github.com/devanshd07o/PDFISTIC-v2/issues">Report an Issue</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 PDFistic (Devansh Dubey). Published under Apache 2.0 license.</div>
+      <div>Designed for Windows 10 &amp; 11 &bull; Microsoft Store Certified</div>
+    </div>
+  </footer>
+
+</body>
+</html>
